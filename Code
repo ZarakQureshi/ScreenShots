@@ -1,0 +1,31 @@
+import os
+import shutil
+import re
+
+backend_file_path = "Desktop/"
+source = [f for f in os.listdir('Desktop') if re.match(r'Screen Shot', f)][0]
+
+# Python program to convert a list to string 
+    
+# Function to convert   
+def listToString(s):  
+    
+    # initialize an empty string 
+    str1 = ""  
+    
+    # traverse in the string   
+    for ele in s:  
+        str1 += ele   
+    
+    # return string   
+    return str1  
+
+#Combine file path and file name
+Appended_string = backend_file_path + listToString(source)
+
+# Driver code     
+print(Appended_string)
+
+# Move file from source to destination
+dest = shutil.move(Appended_string, destination)  
+# Keep running until IndexError: list index out of range
